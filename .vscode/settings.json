@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "coffeshop_database",
+            "database": "coffeshop_database",
+            "username": "ekha",
+            "password": "@0okmnji9!"
+        }
+    ]
+}
