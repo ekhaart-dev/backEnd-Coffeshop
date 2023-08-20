@@ -1,7 +1,7 @@
 APP=backEnd_Coffeshop
 BUILD="./build/$(APP)"
 DB_DRIVER=postgres
-DB_SOURCE="postgresql://ekha:@0okmnji9!@127.0.0.1/coffeshop_database?sslmode=disable&search_path=golang"
+DB_SOURCE="postgresql://ekha:@0okmnji9!@127.0.0.1:5433/coffeshop_database?sslmode=disable&search_path=golang"
 MIGRATIONS_DIR=./migrations
 
 install:

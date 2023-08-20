@@ -6,7 +6,7 @@ import (
 	"log"
 
 	"github.com/asaskevich/govalidator"
-	_ "github.com/joho/godotenv"
+	_ "github.com/joho/godotenv/autoload"
 	"github.com/spf13/viper"
 )
 
