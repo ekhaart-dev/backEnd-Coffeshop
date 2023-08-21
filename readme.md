@@ -15,3 +15,37 @@
     <br />
   </p>
 </div>
+
+## 🛠️ Installation Steps
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/ekhaart-dev/backEnd-Coffeshop.git
+```
+
+2. Install dependencies
+
+```bash
+make install
+```
+
+3. Run the app
+
+```bash
+make build
+```
+
+🌟 You are all set!
+
+## 💻 Built with
+
+-   [Golang](https://go.dev/): Programming Language
+-   [Go-gin](https://pkg.go.dev/github.com/gin-gonic/gin): Web framework
+-   [Postgres](https://www.postgresql.org/): DBMS
+
+
+<hr>
+<p align="center">
+Developed with ❤️ in Indonesia 	🇮🇩
+</p>
