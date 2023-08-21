@@ -75,20 +75,40 @@ func (r *RepoProduct) Get_Count_Data(search string) int {
 	return id
 }
 
+// func (r *RepoProduct) CreateProductData(data *models.Products) (string, error) {
+// 	q := `INSERT INTO golang.products (id_category, banner_product, product_title, price, favorite)
+// 	VALUES(:id_category, :banner_product, :product_title, :price, :favorite)`
+
+// 	_, err := r.NamedExec(q, data)
+// 	if err != nil {
+// 		return "", err
+// 	}
+
+// 	return "add product data successful", nil
+// }
+
 func (r *RepoProduct) CreateProductData(data *models.Products) (string, error) {
-	tx := r.MustBegin()
-	var new_id string
-	tx.Get(&new_id, "select uuid_generate_v4()")
-	data.Id_product = new_id
-	_, err := tx.NamedExec(`INSERT INTO golang.products (id_product, id_category, banner_product, product_title, price, favorite) VALUES(:id_product, :id_category, :banner_product, :product_title, :price, :favorite)`, data)
+	q := `INSERT INTO golang.products(
+		id_category,
+		banner_product,
+		product_title,
+		price,
+		favorite
+	) VALUES (
+		:id_category,
+		:banner_product,
+		:product_title,
+		:price,
+		:favorite
+	)`
+
+	_, err := r.NamedExec(q, data)
 	if err != nil {
-		tx.Rollback()
 		return "", err
 	}
 
-	tx.Commit()
+	return "1 data Products created", nil
 
-	return "add product data successful", nil
 }
 
 func (r *RepoProduct) UpdateProduct(data *models.Products) (string, error) {
